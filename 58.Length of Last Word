@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution(object):https://github.com/codeexer1/leetcode/blob/main/lastword_leng
     def lengthOfLastWord(self,s):
         """
         :type s: str
