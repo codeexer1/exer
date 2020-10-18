@@ -1,13 +1,21 @@
-class Solution(object):https://github.com/codeexer1/leetcode/blob/main/lastword_leng
+class Solution(object):
     def lengthOfLastWord(self,s):
         """
         :type s: str
         :rtype: int
         """
         
+        index=-1
         v=s.split(" ")
-        leng=len(v[-1])
+        leng=len(v[index])
+        
+        while(leng == 0):
+            index-= -1
+            leng=len(v[index])
+            
+            
         
         return leng 
+    
     
     
