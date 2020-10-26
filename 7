@@ -1,0 +1,43 @@
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        array=[]
+        result=0
+        digit=1
+        
+        if(x>0):
+            while(x>0):
+                array.append(x%10)
+                x=x/10  
+            
+            for i in range(len(array)-1,-1,-1):
+                result += digit*array[i]
+                digit*=10
+            
+            if(result> 2**31):
+                return 0
+            
+            return result
+                
+        if(x<0):
+            x_temp= -1*x
+            
+            while(x_temp>0):
+                array.append(x_temp%10)
+                x_temp=x_temp/10  
+                
+            for i in range(len(array)-1,-1,-1):
+                result += digit*array[i]
+                digit*=10
+            
+            if(result> 2**31):
+                return 0
+            
+            
+            return -1*result
+        
+        if(x==0):
+            return 0
