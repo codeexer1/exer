@@ -1,0 +1,16 @@
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        
+        arr = s.split()
+        result=[]
+        
+        for i in range(0,len(arr)):
+            new_str = list(reversed(arr[i]))
+            result.append(''.join(new_str))
+        
+        return ' '.join(result)
+
